@@ -1,0 +1,66 @@
+@import '../lib/reset.scss';
+
+.orderList {
+  @include flexbox();
+  @include flex-direction(column);
+  @include background-color(#eee);
+  li {
+    @include rect(100%, 1.36rem);
+    @include flexbox();
+    @include background-color(#fff);
+    @include margin(.1rem 0 0 0);
+    img {
+      @include rect(.3rem, .3rem);
+      @include margin(.16rem 0 0 .12rem);
+    }
+    .foodDetail {
+      @include rect(100%, 100%);
+      @include margin(0 0 0 .12rem);
+      .shopName {
+        @include rect(100%, .54rem);
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+        @include border(0 0 1px 0, #eee, solid);
+        .storeName {
+          @include font-weight(normal);
+        }
+        .status {
+          @include margin(0 .12rem 0 0);
+          @include font-size(.12rem);
+        }
+      }
+      .food {
+        @include rect(100%, .4rem);
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+        @include border(0 0 1px 0, #eee, solid);
+        .pri {
+          @include margin(0 .12rem 0 0);
+          @include font-size(.14rem);
+          @include font-weight(bold);
+        }
+        .goods {
+          @include font-size(.12rem);
+          @include text-color(#666);
+        }
+      }
+      .caozuo {
+        @include rect(100%, .42rem);
+        @include flexbox();
+        @include align-items();
+        p {
+          @include margin(0 .12rem 0 2rem);
+          @include text-color(#00f)
+        }
+        .btn {
+          border: 0;
+          background: 0;
+          @include font-size(.12rem);
+          @include border(1px 1px 1px 1px, #2395ff, solid, .02rem);
+        }
+      }
+    }
+  }
+}

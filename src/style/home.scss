@@ -1,0 +1,80 @@
+@import '@/lib/reset.scss';
+
+.box {
+  .content {
+    touch-action: none;
+    position: relative;
+    .header {
+      @include rect(100%, auto);
+      @include flexbox();
+      @include align-items();
+      span {
+        @include font-size(.2rem);
+        @include text-color(#fff);
+        @include font-weight(bold);
+        @include margin(0 0 0 .14rem);
+      }
+      i {
+        @include font-size(.16rem);
+        @include text-color(#fff);
+        @include font-weight(bold);
+        @include margin(0 0 0 .08rem);
+      }
+    }
+    .search {
+      @include rect(100%, .44rem);
+      @include background-color(#00aaff);
+      z-index: 1000;
+      input {
+        @include rect(3.4rem, .3rem);
+        @include margin(.08rem 0 0 .1rem);
+        border: 0;
+      }
+    }
+    .icon-fanhuidingbu {
+      @include font-size(.42rem);
+      position: fixed;
+      bottom: .5rem;
+      right: .2rem;
+    }
+    .icon-gouwuche {
+      @include font-size(.42rem);
+      position: fixed;
+      bottom: 1rem;
+      right: .14rem;
+      z-index: 1000;
+    }
+    .am-grid-carousel {
+      @include padding(.44rem 0 0 0);
+      position: relative;
+      .slider-decorator-0 {
+        position: absolute;
+        top: 1.35rem;
+      }
+    }
+    .tip {
+      @include rect(100%, .48rem);
+      @include flexbox();
+      @include align-items();
+      @include justify-content();
+      span{
+        @include rect(.24rem, .01rem);
+        @include background-color(#999);
+      }
+      p {
+        @include margin(0 .1rem 0 .1rem);
+      }
+    }
+    .foodList {
+      .am-list-body {
+        .am-list-item-top {
+          .am-list-thumb {
+            img {
+              @include rect(.58rem, .58rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}

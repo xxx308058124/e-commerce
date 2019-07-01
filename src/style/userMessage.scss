@@ -1,0 +1,21 @@
+@import '@/lib/reset.scss';
+
+.box {
+  .content {
+    @include rect(100%, 100%);
+    @include background-color(#f5f5f5);
+    .am-list {
+      @include margin(0 0 .1rem 0);
+      .am-list-header {
+        @include background-color(#f5f5f5);
+        @include font-size(.12rem);
+        @include text-color(#999);
+      }
+    }
+    .am-button {
+      @include text-color(#f66);
+      @include rect(100%, .44rem);
+      @include margin(.2rem 0 0 0);
+    }
+  }
+}

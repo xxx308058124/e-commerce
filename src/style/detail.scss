@@ -1,0 +1,179 @@
+@import '../lib/reset.scss';
+
+li {
+  list-style: none;
+}
+.detailBox {
+  @include flexbox();
+  @include flex-direction(column);
+  @include rect(100%, 100%);
+  @include background-color(#fff);
+  .content {
+    @include flex();
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+    .detailContent {
+      @include flex();
+      @include rect(100%, auto);
+      @include overflow();
+      .into{
+        @include rect(100%, 2.8rem);
+        .detailHeader{
+          @include rect(100%, 1rem);
+          background-color:#ebebeb;
+          .iconfont{
+            font-size: 0.2rem;
+            position: relative;
+            top: -0.25rem;
+            color: #333;
+          }
+        }
+        .img{
+          @include rect(0.3rem,0.3rem);
+          img{
+            @include rect (0.8rem,0.8rem);
+            position: relative;
+            left: 1.4rem;
+            top: -0.55rem;
+          }
+        }
+        .into0{
+          @include rect(100%, 1.5rem);
+          @include flexbox();
+          @include flex-direction(column);
+          @include align-items();
+          .into-title{
+            @include rect(100%, 0.35rem);
+            @include text-align();
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-weight: 600;
+            font-size: 0.22rem;
+          }
+          .into2{
+            @include rect(2.5rem, 0.3rem);
+            @include flexbox();
+            @include align-items();
+            @include justify-content(space-around);
+            @include font-size(.12rem);
+            @include text-color(#333);
+          }
+          .into3{
+            @include rect(3.2rem,0.3rem);
+            @include flexbox();
+            @include align-items();
+            @include justify-content(space-between);
+            @include font-size(.14rem);
+            .into3-acti{
+              @include rect(2.3rem, 0.2rem);
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow:ellipsis;
+              color: #333;
+            }
+            .into3-discounts{
+              color: #999;
+            }
+          }
+          .into4{
+            @include rect(100%,0.3rem);
+            @include font-size(.12rem);
+            @include text-align();
+            @include line-height(.3rem);
+            color: #999;
+          }
+        }
+      }
+      .allrating {
+        .rating {
+          width: 100%;
+          padding: 0 3%;
+          .rating-list {
+            border-bottom: 1px solid #ccc;
+            padding: 0.1rem 0;
+            .li-wrap {
+              @include flexbox();
+              @include justify-content(space-around);
+              .img {
+                @include rect(10%,100%)
+              }
+              .h6 {
+                @include rect(80%,100%);
+                .h2 {
+                  @include flexbox();
+                  @include justify-content(space-between);
+                  font-size: 0.12rem;
+                }
+                .h5 {
+                  .el-rate {
+                    font-size: 0.12rem;
+                    span {
+                      font-size: 0.12rem;
+                      .el-rate__icon {
+                        font-size: 0.12rem;
+                      }
+                    }
+                  }
+                  h3 {
+                    font-weight: 100;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .detailFooter {
+    @include rect(100%, .44rem);
+    @include background-color(rgba(61,61,63,.9));
+    @include flexbox();
+    @include align-items();
+    position: relative;
+    .tubiao {
+      @include rect(.48rem, .48rem);
+      @include border(.15rem .15rem .15rem .15rem, #444, solid, 50%);
+      @include background-color(#999);
+      position: relative;
+      position: absolute;
+      left: 0.1rem;
+      top: -0.1rem;
+      .icon-gouwuche {
+        @include font-size(.44rem);
+        position: absolute;
+        left: -0.06rem;
+        top: -0.08rem;
+      }
+    }
+    .fPrice {
+      @include text-color(#fff);
+      @include flex(2);
+      @include padding(0 0 0 .7rem);
+    }
+    .foodPrice {
+      @include text-color(#999);
+      @include font-size(.12rem);
+      @include flex(2);
+      @include padding(0 0 0 .7rem);
+    }
+    .qiPrice {
+      @include text-color(#fff);
+      @include flex(1);
+    }
+    .qiSend {
+      @include text-color(#fff);
+      @include flex(1);
+    }
+    .balance {
+      @include rect(1rem, .44rem);
+      @include background-color(#38ca73);
+      @include text-color(#fff);
+      @include text-align();
+      @include line-height(.44rem);
+      @include flex(1);
+    }
+  }
+}

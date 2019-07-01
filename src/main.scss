@@ -1,0 +1,57 @@
+@import './lib/reset.scss';
+
+html, body, #root, .container {
+  @include rect(100%, 100%);
+}
+
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .box {
+    @include flex();
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+
+    .header {
+      @include rect(100%, .44rem);
+      @include background-color(#00aaff);
+    }
+    .content {
+      @include flex();
+      @include rect(100%, auto);
+      @include overflow();
+    }
+  }
+  .footer {
+    @include rect(100%, .5rem);
+    @include background-color(#fff);
+    @include border(2px 0 0 0, #e6e6e6, solid);
+    ul {
+      @include rect(100%, 100%);
+      @include flexbox();
+      li {
+        @include flex();
+        a {
+          @include rect(100%, 100%);
+          @include flexbox();
+          @include flex-direction(column);
+          @include justify-content();
+          @include align-items();
+          @include text-color(#818181);
+          span {
+            @include font-size(0.18rem);
+            @include font-weight(bold);
+          }
+          p {
+            @include font-size(0.12rem);
+          }
+
+          &.active {
+            @include text-color(#00aaff);
+          }
+        }
+      }
+    }
+  }
+}

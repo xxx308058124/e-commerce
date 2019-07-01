@@ -1,0 +1,21 @@
+@import '@/lib/reset.scss';
+
+.box {
+  @include rect(100%, 100%);
+  @include background-color(#fff);
+  .logo {
+    @include rect(100%, 1.04rem);
+    @include flexbox();
+    @include align-items();
+    @include justify-content();
+    .icon-elmyhq {
+      @include font-size(.32rem);
+      @include text-color(#00aaff);
+      @include font-weight(bold);
+    }
+  }
+  .am-button {
+    @include rect(3rem, .44rem);
+    @include margin(.2rem 0 0 .3rem);
+  }
+}

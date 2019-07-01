@@ -1,0 +1,100 @@
+@import '@/lib/reset.scss';
+
+.box {
+  .am-navbar-light {
+    @include background-color(#00aaff);
+    border: 0;
+    .am-navbar-left {
+      @include text-color(#fff);
+    }
+    .am-navbar-title {
+      @include text-color(#fff);
+      @include font-weight(bold);
+    }
+  }
+  .content {
+    @include background-color(#f5f5f5);
+    .my-list {
+      @include rect(100%, .95rem);
+      @include background-color(#00aaff);
+      .am-list-body {
+        @include rect(100%, .95rem);
+        @include background-color(#00aaff);
+        .logBefore {
+          @include rect(100%, .95rem);
+          @include background-color(#00aaff);
+          .am-list-thumb {
+            @include rect(.6rem, .6rem);
+            @include border-radius(50%);
+            @include overflow();
+            float: left;
+            @include margin(.2rem 0 0 0);
+            img {
+              @include rect(.6rem, .6rem);
+            }
+          }
+          .am-list-line {
+            float: left;
+            @include margin(.04rem 0 0 .08rem);
+            @include rect(2.6rem, .95rem);
+            @include text-color(#fff);
+            .am-list-content {
+              @include text-color(#fff);
+              button {
+                background: 0;
+                border: 0;
+                @include text-color(#fff);
+                @include font-weight(bold);
+                @include font-size(.18rem);
+              }
+              .am-list-brief {
+                @include font-size(.12rem);
+                @include text-color(#fff);
+                @include font-weight(bold);
+              }
+            }
+            .am-list-arrow {
+              @include margin(0 0 0 1.4rem);
+            }
+          }
+        }
+        .logAfter {
+          @include rect(100%, .95rem);
+          @include background-color(#00aaff);
+          .am-list-thumb {
+            @include rect(.6rem, .6rem);
+            @include border-radius(50%);
+            @include overflow();
+            float: left;
+            @include margin(.2rem 0 0 0);
+            img {
+              @include rect(.6rem, .6rem);
+            }
+          }
+          .am-list-line {
+            float: left;
+            @include margin(.14rem 0 0 .08rem);
+            @include text-color(#fff);
+            .am-list-content {
+              @include text-color(#fff);
+              .am-list-brief {
+                @include font-size(.12rem);
+                @include text-color(#fff);
+                @include font-weight(bold);
+              }
+            }
+            .am-list-arrow {
+              @include margin(0 0 0 1.4rem);
+            }
+          }
+        }
+      }
+    }
+    .am-grid-line {
+      @include margin(0 0 .1rem 0);
+    }
+    .userList {
+      @include margin(0 0 .1rem 0);
+    }
+  }
+}

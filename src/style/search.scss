@@ -1,0 +1,25 @@
+@import '@/lib/reset.scss';
+
+.box {
+  .content {
+    @include background-color(#fff);
+    .searchHeader {
+      @include rect(100%, .44rem);
+      @include flexbox();
+      @include align-items();
+      @include justify-content(space-between);
+      .icon-arrow_lift {
+        @include text-color(#000);
+        @include margin(0 0 0 .1rem);
+      }
+      input {
+        @include rect(2.6rem, .3rem);
+        border: 0;
+        background: #eee;
+      }
+      p {
+        @include margin(0 0.1rem 0 0);
+      }
+    }
+  }
+}
